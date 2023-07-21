@@ -1,0 +1,45 @@
+@mixin textoindex($colortexto:#004091,$font:bold,$aliniado:center,$lado:auto)
+
+{
+color: $colortexto;
+font-weight: $font;
+text-align: $aliniado;
+margin: $lado;
+
+};
+
+.inicio
+{
+@include textoindex()
+}
+
+@keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .fotonoticia {
+    animation: slide-in 1s ease-in-out;
+  }
+
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .principal {
+    animation: slide-in 1s ease-in-out;
+  }
+
+
+@import 'anidacion';
+
+
